@@ -1,27 +1,27 @@
-// Á¤ÇØÁø ¹üÀ§¸¦ ¹ş¾î³­ °ÍÀ» ÇÊÅÍ¸µ ÇÏ´Â ÇÔ¼ö
+// ì •í•´ì§„ ë²”ìœ„ë¥¼ ë²—ì–´ë‚œ ê²ƒì„ í•„í„°ë§ í•˜ëŠ” í•¨ìˆ˜
 
 // export function readingsOutsideRange(station, min, max) {
 //   return station.readings.filter((r) => r.temp < min || r.temp > max);
 // }
 
-// ¸®ÆÑÅä¸µ 1
-// ¸Å°³º¯¼ö¸¦ ÇÏ³ªÀÇ °´Ã¼·Î ¹­¾îÁØ´Ù
-// ¿¬°ü ÀÖ´Â °ªµéÀ» °´Ã¼·Î Àü´ŞÇØ¼­  ¸Å°³º¯¼öÀÇ ¼ö¸¦ ÁÙÀÏ ¼ö ÀÖ´Ù
+// ë¦¬íŒ©í† ë§ 1
+// ë§¤ê°œë³€ìˆ˜ë¥¼ í•˜ë‚˜ì˜ ê°ì²´ë¡œ ë¬¶ì–´ì¤€ë‹¤
+// ì—°ê´€ ìˆëŠ” ê°’ë“¤ì„ ê°ì²´ë¡œ ì „ë‹¬í•´ì„œ  ë§¤ê°œë³€ìˆ˜ì˜ ìˆ˜ë¥¼ ì¤„ì¼ ìˆ˜ ìˆë‹¤
 // export function readingsOutsideRange(station, range) {
 //   return station.readings.filter(
 //     (r) => r.temp < range.temperatureFloor || r.temp > range.temperatureCeiling
 //   );
 // }
 
-// ¾Æ·¡ °´Ã¼ »ç¿ë
+// ì•„ë˜ ê°ì²´ ì‚¬ìš©
 // const operationPlan = {
 //   temperatureFloor: 51,
 //   temperatureCeiling: 53,
 // };
 
-// ¸®ÆÑÅä¸µ 2
-// ¿ÜºÎ¿¡¼­ »ç¿ëÇÏµµ·Ï export »ç¿ë
-// µ¥ÀÌÅÍ¸¦ ´ã°í ÀÖ´Â ·ÎÁ÷°ú µ¥ÀÌÅÍ¸¦ Ã³¸®ÇÏ´Â ·ÎÁ÷À» ÇÏ³ªÀÇ Å¬·¡½º¿¡¼­ Ã³¸®ÇÑ´Ù
+// ë¦¬íŒ©í† ë§ 2
+// ì™¸ë¶€ì—ì„œ ì‚¬ìš©í•˜ë„ë¡ export ì‚¬ìš©
+// ë°ì´í„°ë¥¼ ë‹´ê³  ìˆëŠ” ë¡œì§ê³¼ ë°ì´í„°ë¥¼ ì²˜ë¦¬í•˜ëŠ” ë¡œì§ì„ í•˜ë‚˜ì˜ í´ë˜ìŠ¤ì—ì„œ ì²˜ë¦¬í•œë‹¤
 export class NumberRange {
   #min;
   #max;
@@ -44,18 +44,18 @@ export class NumberRange {
 }
 
 const station = {
-  name: 'ZB1',
+  name: "ZB1",
   readings: [
-    { temp: 47, time: '2016-11-10 09:10' },
-    { temp: 53, time: '2016-11-10 09:20' },
-    { temp: 58, time: '2016-11-10 09:30' },
-    { temp: 53, time: '2016-11-10 09:40' },
-    { temp: 51, time: '2016-11-10 09:50' },
+    { temp: 47, time: "2016-11-10 09:10" },
+    { temp: 53, time: "2016-11-10 09:20" },
+    { temp: 58, time: "2016-11-10 09:30" },
+    { temp: 53, time: "2016-11-10 09:40" },
+    { temp: 51, time: "2016-11-10 09:50" },
   ],
 };
 
-// ±âÁ¸ °´Ã¼¿¡¼­ ÀÎ½ºÅÏ½º·Î ¸®ÆÑÅä¸µ
-const operationPlan = new Number(51, 53);
+// ê¸°ì¡´ ê°ì²´ì—ì„œ ì¸ìŠ¤í„´ìŠ¤ë¡œ ë¦¬íŒ©í† ë§
+const operationPlan = new NumberRange(51, 53);
 
 export function readingsOutsideRange(station, range) {
   return station.readings.filter((r) => !range.contains(r.temp));
@@ -64,3 +64,31 @@ export function readingsOutsideRange(station, range) {
 const result = readingsOutsideRange(station, operationPlan);
 
 console.log(result);
+
+/**
+ * ë¦¬íŒ©í† ë§ 3
+ * readingOutsideRangeí•¨ìˆ˜ê°€ station ëŒ€ì‹  station.readingsë¥¼ ë°›ê²Œ ìˆ˜ì •í•´ë³´ì•˜ìŠµë‹ˆë‹¤.
+ * NumberRangeì˜ getterëŠ” ì‚¬ìš©í•˜ì§€ ì•Šìœ¼ë‹ˆ ì—†ì• ê³ 
+ * contains í•¨ìˆ˜ë¥¼ í™œìš©í•´ isOutlier í•¨ìˆ˜ë¥¼ ë§Œë“¤ì–´ë³´ì•˜ìŠµë‹ˆë‹¤.
+ */
+export class NumberRange2 {
+  #min;
+  #max;
+
+  constructor(min, max) {
+    this.#min = min;
+    this.#max = max;
+  }
+
+  contains(number) {
+    return this.#min <= number && this.#max >= number;
+  }
+
+  isOutside(number) {
+    return this.contains(number);
+  }
+}
+
+export function readingsOutsideRange2(data, range) {
+  return data.filter((r) => range.isOutside(r.temp));
+}

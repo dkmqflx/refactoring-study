@@ -1,33 +1,34 @@
-// ³Ê¹« Ãà¾àµÈ ÇÔ¼ö ÀÌ¸§À» »ç¿ëÇÏ°í ÀÖ´Ù
+// ë„ˆë¬´ ì¶•ì•½ëœ í•¨ìˆ˜ ì´ë¦„ì„ ì‚¬ìš©í•˜ê³  ìžˆë‹¤
 export function circum(radius) {
   return 2 * Math.PI * radius;
 }
 
-// Ã¥¿¡¼­ ³ª¿À´Â °Í Ã³·³ ±×·¸°Ô ¼öµ¿ÀûÀ¸·Î
-// ÄÚµå ¿¡µðÅÍ¿¡¼­ ¸®ÆÑÅä¸µÀ» Áö¿øÇØÁØ´Ù
-// ÇÔ¼ö ÀÌ¸§¿¡´Ù°¡ ¿À¸¥ÂÊ ¸¶¿ì½º Å¬¸¯ÇÏ¸é rename symbol ÀÖ´Ù
-// ¼öÁ¤ÇÏ¸é ÇØ´ç ÇÔ¼ö ÀÌ¸§ »Ó ¾Æ´Ï¶ó ÇÔ¼ö¸¦ »ç¿ëÇÏ´Â ¸ðµç °÷¿¡¼­ ÀÌ¸§À» º¯°æÇØÁØ´Ù
-// ¿øÁÖÀ²ÀÌ¶ó´Â ÀÌ¸§ ¸ðµÎ Àû¾îÁØ´Ù
+// ì±…ì—ì„œ ë‚˜ì˜¤ëŠ” ê²ƒ ì²˜ëŸ¼ ê·¸ë ‡ê²Œ ìˆ˜ë™ì ìœ¼ë¡œ
+// ì½”ë“œ ì—ë””í„°ì—ì„œ ë¦¬íŒ©í† ë§ì„ ì§€ì›í•´ì¤€ë‹¤
+// í•¨ìˆ˜ ì´ë¦„ì—ë‹¤ê°€ ì˜¤ë¥¸ìª½ ë§ˆìš°ìŠ¤ í´ë¦­í•˜ë©´ rename symbol ìžˆë‹¤
+// ìˆ˜ì •í•˜ë©´ í•´ë‹¹ í•¨ìˆ˜ ì´ë¦„ ë¿ ì•„ë‹ˆë¼ í•¨ìˆ˜ë¥¼ ì‚¬ìš©í•˜ëŠ” ëª¨ë“  ê³³ì—ì„œ ì´ë¦„ì„ ë³€ê²½í•´ì¤€ë‹¤
+// ì›ì£¼ìœ¨ì´ë¼ëŠ” ì´ë¦„ ëª¨ë‘ ì ì–´ì¤€ë‹¤
 export function circumference(radius) {
   return 2 * Math.PI * radius;
 }
 
 /**
  *
- * Q. ÇÔ¼ö¸íÀÌ¶ó calculateCircumference ¶ó°í »ý°¢À» Çß¾ú´Âµ¥, È¤½Ã ±×³É circumference¶ó°í ³×ÀÌ¹ÖÇÏ½Å ÀÌÀ¯°¡ ÀÖÀ»±î¿ä?!
+ * Q. í•¨ìˆ˜ëª…ì´ë¼ calculateCircumference ë¼ê³  ìƒê°ì„ í–ˆì—ˆëŠ”ë°, í˜¹ì‹œ ê·¸ëƒ¥ circumferenceë¼ê³  ë„¤ì´ë°í•˜ì‹  ì´ìœ ê°€ ìžˆì„ê¹Œìš”?!
  *
- * A.ÇÔ¼ö¸íÀÌ ±æ¾îÁ®¼­ Àú´Â »ý·« Çß´Âµ¥ ±×·¸°Ô ÀÛ¼ºÇÏ¼Åµµ ÁÁ¾Æ¿ä ?
- *  ¹«¾ð°¡ ±æ°Ô °è»êÇÏ°í, ³×Æ®¿öÅ© Åë½ÅÀ» ÇÏ°Å³ª, µ¥ÀÌÅÍº£ÀÌ½º¿¡¼­ ÀÐÀ»‹š´Â ÇÔ¼ö¸íÀ» ²À µ¿»ç·Î ½ÃÀÛÇÏµµ·Ï ÀÛ¼ºÇØ¼­ ¸íÈ®ÇÏ°Ô ÇØÁÖ´Â°Ô ÁÁ¾Æ¿ä
+ * A.í•¨ìˆ˜ëª…ì´ ê¸¸ì–´ì ¸ì„œ ì €ëŠ” ìƒëžµ í–ˆëŠ”ë° ê·¸ë ‡ê²Œ ìž‘ì„±í•˜ì…”ë„ ì¢‹ì•„ìš”
+ * ë¬´ì–¸ê°€ ê¸¸ê²Œ ê³„ì‚°í•˜ê³ , ë„¤íŠ¸ì›Œí¬ í†µì‹ ì„ í•˜ê±°ë‚˜, ë°ì´í„°ë² ì´ìŠ¤ì—ì„œ ì½ì„ë•ŒëŠ” í•¨ìˆ˜ëª…ì„ ê¼­ ë™ì‚¬ë¡œ ì‹œìž‘í•˜ë„ë¡ ìž‘ì„±í•´ì„œ ëª…í™•í•˜ê²Œ í•´ì£¼ëŠ”ê²Œ ì¢‹ì•„ìš”
  * get..
  * fetch..
  * read..=
  * calcuate...
  *
- * ´Ù¸¸, Å¬·¡½º/¦Ã¼/¸ðµâ ¾È¿¡¼­ ¼Ó¼ºÃ³·³ ¾²ÀÌ´Â °æ¿ì (±ä °è»êÀÌ ¾Æ´Ï¶ó, ¼Ó¼º°ª°ú À¯»çÇÑ °æ¿ì) ¸í»ç·Îµµ »ç¿ë °¡´ÉÇÕ´Ï´Ù.
+ * ë‹¤ë§Œ, í´ëž˜ìŠ¤/ê°ì²´/ëª¨ë“ˆ ì•ˆì—ì„œ ì†ì„±ì²˜ëŸ¼ ì“°ì´ëŠ” ê²½ìš° (ê¸´ ê³„ì‚°ì´ ì•„ë‹ˆë¼, ì†ì„±ê°’ê³¼ ìœ ì‚¬í•œ ê²½ìš°) ëª…ì‚¬ë¡œë„ ì‚¬ìš© ê°€ëŠ¥í•©ë‹ˆë‹¤.
  * person.name;
  * person.fullname;
- * shape.circumference;
  *
+ * shape.circumference;
+ * ì•„ëž˜ì²˜ëŸ¼ ì •ì˜í•´ì„œ ì‚¬ìš©í•  ìˆ˜ ìžˆë‹¤
  * class Shape {
  * get circumference() { } ..
  * }

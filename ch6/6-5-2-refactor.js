@@ -4,10 +4,10 @@ export default class Book {
     this.#reservations = [];
   }
 
-  // ¿ì¼±¼øÀ§°¡ ´õ ³ôÀ¸¸é ´õ ¸ÕÀú ¿¹¾àµÇ´Â Ãß°¡ÀûÀÎ ±â´ÉÀÌ ÀÖ´Ù°í ÇÏÀÚ
-  // booleanÀ¸·Î ´Ù¸¥ µ¿ÀÛÀ» ÇÏ´Â ÇÔ¼ö´Â ÁÁÁö ¾Ê´Ù
-  // ÀÌ·± booleanÀ» flag¶ó°í ÇÑ´Ù
-  // ÇÏÁö¸¸ Á¤¸»Á¤¸» ÇÊ¿äÇÑ °æ¿ì¶ó¸é, ¾Æ·¡Ã³·³ ±âÁ¸¿¡ ÇØ´ç ÇÔ¼ö¸¦ È£ÃâÇÏ´ø ºÎºÐ¿¡¼­ ¿¡·¯ ³ªÁö ¾Êµµ·Ï false·Î ±âº» °ª ¼³Á¤ÇØÁØ´Ù
+  // ìš°ì„ ìˆœìœ„ê°€ ë” ë†’ìœ¼ë©´ ë” ë¨¼ì € ì˜ˆì•½ë˜ëŠ” ì¶”ê°€ì ì¸ ê¸°ëŠ¥ì´ ìžˆë‹¤ê³  í•˜ìž
+  // booleanìœ¼ë¡œ ë‹¤ë¥¸ ë™ìž‘ì„ í•˜ëŠ” í•¨ìˆ˜ëŠ” ì¢‹ì§€ ì•Šë‹¤
+  // ì´ëŸ° booleanì„ flagë¼ê³  í•œë‹¤
+  // í•˜ì§€ë§Œ ì •ë§ì •ë§ í•„ìš”í•œ ê²½ìš°ë¼ë©´, ì•„ëž˜ì²˜ëŸ¼ ê¸°ì¡´ì— í•´ë‹¹ í•¨ìˆ˜ë¥¼ í˜¸ì¶œí•˜ë˜ ë¶€ë¶„ì—ì„œ ì—ëŸ¬ ë‚˜ì§€ ì•Šë„ë¡ falseë¡œ ê¸°ë³¸ ê°’ ì„¤ì •í•´ì¤€ë‹¤
   addReservation(customer, isPriority = false) {
     this.#reservations.push(customer);
   }

@@ -1,11 +1,11 @@
 // export function inNewEngland(aCustomer) {
-//   // ÇÊ¿äÇÑ °ÍÀº stateÀÎµ¥ ÀüÃ¼ customer¶ó´Â ¸ğµç °´Ã¼¸¦ ¹Ş°í ÀÖ´Ù
-//   // Á¤¸» ÇÊ¿äÇÑ °´Ã¼¸¸ ¹Ş¾Æ¿Â´Ù
+//   // í•„ìš”í•œ ê²ƒì€ stateì¸ë° ì „ì²´ customerë¼ëŠ” ëª¨ë“  ê°ì²´ë¥¼ ë°›ê³  ìˆë‹¤
+//   // ì •ë§ í•„ìš”í•œ ê°ì²´ë§Œ ë°›ì•„ì˜¨ë‹¤
 //   return ['MA', 'CT', 'ME', 'VT', 'NH', 'RI'].includes(aCustomer.address.state);
 // }
 
 export function inNewEngland(state) {
-  // ÇÊ¿äÇÑ °ÍÀº stateÀÎµ¥ ÀüÃ¼ customer¶ó´Â ¸ğµç °´Ã¼¸¦ ¹Ş°í ÀÖ´Ù
-  // Á¤¸» ÇÊ¿äÇÑ °´Ã¼¸¸ ¹Ş¾Æ¿Í¼­ ¿ÜºÎ °´Ã¼¾Ö ´ëÇÑ ÀÇÁ¸µµ¸¦ ³·Ãá´Ù
-  return ['MA', 'CT', 'ME', 'VT', 'NH', 'RI'].includes(state);
+  // í•„ìš”í•œ ê²ƒì€ stateì¸ë° ì „ì²´ customerë¼ëŠ” ëª¨ë“  ê°ì²´ë¥¼ ë°›ê³  ìˆë‹¤
+  // ì •ë§ í•„ìš”í•œ ê°ì²´ë§Œ ë°›ì•„ì™€ì„œ ì™¸ë¶€ ê°ì²´ì•  ëŒ€í•œ ì˜ì¡´ë„ë¥¼ ë‚®ì¶˜ë‹¤
+  return ["MA", "CT", "ME", "VT", "NH", "RI"].includes(state);
 }

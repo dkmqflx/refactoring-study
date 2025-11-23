@@ -16,7 +16,6 @@ function moreThanFiveLateDeliveries(dvr) {
 // 아래철럼 인라인으로 만들어준다
 
 // 예제 1 - 리팩토링
-
 export function rating(driver) {
   return driver.numberOfLateDeliveries > 5 ? 2 : 1;
 }
@@ -29,8 +28,8 @@ function reportLines(customer) {
 }
 
 function gatherCustomerData(out, customer) {
-  out.push(['name', customer.name]);
-  out.push(['location', customer.location]);
+  out.push(["name", customer.name]);
+  out.push(["location", customer.location]);
 }
 
 // 예제 2 - 리팩토링
@@ -40,7 +39,7 @@ function gatherCustomerData(out, customer) {
 
 function reportLines(customer) {
   const result = [];
-  result.push(['name', customer.name]);
-  result.push(['location', customer.location]);
+  result.push(["name", customer.name]);
+  result.push(["location", customer.location]);
   return result;
 }

@@ -1,4 +1,4 @@
 export function isDeliveryFree(anOrder) {
-  // ±»ÀÌ ÇÑ´«¿¡ ºÁµµ ÀÌÇØµÇ´Â °ÍÀº º¯¼ö·Î ÃßÃâÇÒ ÇÊ¿ä ¾ø´Ù
+  // // êµ³ì´ í•œëˆˆì— ë´ë„ ì´í•´ë˜ëŠ” ê²ƒì€ ë³€ìˆ˜ë¡œ ì¶”ì¶œí•  í•„ìš” ì—†ë‹¤
   return (basePrice = anOrder.basePrice);
 }
