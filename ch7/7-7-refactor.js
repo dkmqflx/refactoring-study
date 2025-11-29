@@ -10,6 +10,14 @@ class Person {
     return this.#name;
   }
 
+  get manager() {
+    return this.#department.manager;
+  }
+
+  get chargeCode() {
+    return this.#department.chargeCode;
+  }
+
   get department() {
     return this.#department;
   }
@@ -44,11 +52,7 @@ export class Department {
   }
 }
 
-const person = new Person("Tom", new Department("aManager", "999"));
+const person = new Person('Tom', new Department('aManager', '999'));
 console.log(person.name);
-// person 안에 department 인스턴스가 있고,
-// department 인스턴스 안에 manager와 chargeCode가 있다라는 것을 외부에 노출한 상황
-// 내부적으로 사용한 정보를 외부에 지나치게 노출하게된 상황
-// 7-5.refactor.js를 보면, person을 통해 telephoneNumber 인스턴스에 있는 값을 바로 접근한다
-console.log(person.department.manager);
-console.log(person.department.chargeCode);
+console.log(person.manager);
+console.log(person.chargeCode);
