@@ -32,3 +32,7 @@ class CustomerContract {
     this.#startDate = startDate;
   }
 }
+
+/**
+ * 8.1의 예제인 함수 옮기기와, 필드 옮기기 모두 목표는 응집도를 높이는 것
+ */

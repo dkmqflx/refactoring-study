@@ -1,12 +1,18 @@
 export function trackSummary(points) {
   const totalTime = calculateTime();
+
   const totalDistance = calculateDistance();
+
   const pace = totalTime / 60 / totalDistance;
+
   return {
     time: totalTime,
     distance: totalDistance,
     pace: pace,
   };
+
+  // trackSummary 내에서 사용되는 아래 함수들이, trackSummary에서 사용하는 데이터와 응집도가 높은 상태인가 점검
+  // 즉, totalTime, totalDistance 같은 데이터들이 아래 함수들과 밀접하게 연관이 있는지 점점
 
   function calculateDistance() {
     let result = 0;
@@ -16,6 +22,7 @@ export function trackSummary(points) {
     return result;
   }
 
+  // distance 함수는 밀접하게 연관되어 있지 않다 -> 중첩함수이기 때문에 외부로 빼내는 리팩토링 필요
   function distance(p1, p2) {
     // 포뮬라: http://www.movable-type.co.uk/scripts/latlong.html
     const EARTH_RADIUS = 3959; // in miles
@@ -50,4 +57,5 @@ const tokyo = {
 };
 
 const summary = trackSummary([newYork, tokyo]);
+
 console.log(summary);
