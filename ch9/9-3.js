@@ -4,6 +4,7 @@ class Order {
   get discountedTotal() {
     return this._discountedTotal;
   }
+
   set discount(value) {
     const old = this._discount;
     this._discount = value;
@@ -17,6 +18,7 @@ class ProductionPlan {
   get production() {
     return this._production;
   }
+
   applyAdjustment(adjustment) {
     this._adjustments.push(adjustment);
     this._production += adjustment.amount;

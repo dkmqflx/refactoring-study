@@ -1,6 +1,7 @@
 class Person {
   #name;
   #telephoneNumber;
+
   constructor(name, areaCode, number) {
     this.#name = name;
     this.#telephoneNumber = new TelephoneNumber(areaCode, number);
@@ -15,6 +16,9 @@ class Person {
   }
 
   get telephoneNumber() {
+    // toString을 사용하지 않고 return 하면 해당 인스턴스에 접근해서 내부 데이터를 변경할수 있기 때문에
+    // 따라서 toString을 사용하여 내부 데이터를 변경할수 없도록 한다.
+    // 하지만 이는 실수할 가능성이 있다.
     return this.#telephoneNumber.toString;
   }
 
@@ -38,6 +42,7 @@ class Person {
 class TelephoneNumber {
   #areaCode;
   #number;
+
   constructor(area, number) {
     this.#areaCode = area;
     this.#number = number;
@@ -62,7 +67,8 @@ class TelephoneNumber {
   }
 }
 
-const person = new Person('엘리', '010', '12345678');
+const person = new Person("엘리", "010", "12345678");
+
 console.log(person.name);
 console.log(person.officeAreaCode);
 console.log(person.officeNumber);

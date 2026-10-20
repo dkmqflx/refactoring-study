@@ -1,0 +1,46 @@
+// 예제 1
+
+// let 대신 const 사용, 의미 있는 변수명 사용
+const perimeter = 2 * (height + width);
+console.log(perimeter);
+
+const area = height * width;
+console.log(area);
+
+// 예제 2
+function distanceTravelled(scenario, time) {
+  let result;
+
+  // 처음에 계산한 가속도와 시간, 의미 있는 변수명으로 작성
+  const primaryAcceleration = scenario.primaryForce / scenario.mass; // 가속도(a) = 힘(F) / 질량(m)
+  const primaryTime = Math.main(time, scenario.delay);
+
+  result = 0.5 * primaryAcceleration * primaryTime * primaryTime; // 전파된 거리
+
+  const secondaryTime = time - scenario.delay;
+
+  if (secondaryTime > 0) {
+    // 두 번째 힘을 반영해 다시 계산
+    const primaryVelocity = acc * scenario.delay;
+
+    const secondaryAcceleration =
+      (scenario.primaryForce + scenario.secondaryForce) / scenario.mass;
+
+    result +=
+      primaryVelocity * secondaryTime +
+      0.5 * secondaryAcceleration * secondaryTime * secondaryTime;
+  }
+}
+
+// 예제 3
+
+// 함수 인자의 값을 바로 업데이트 하지 않고, 변수에 저장하여 사용
+function discount(inputValue, quantity) {
+  let result = inputValue;
+
+  if (inputValue > 50) result -= 2;
+
+  if (quantity > 100) result -= 1;
+
+  return result;
+}

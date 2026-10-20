@@ -35,7 +35,9 @@ export function customerName(site) {
   const aCustomer = site.customer;
   // 더 많은 코드가 여기에 있음
   let customerName;
-  if (aCustomer === 'unknown') customerName = 'occupant';
+
+  // 특이 케이스에는 customerName를 occupant로 설정한다
+  if (aCustomer === "unknown") customerName = "occupant";
   else customerName = aCustomer.name;
 
   return customerName;
